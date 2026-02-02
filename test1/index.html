@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>植物大战僵尸 Web版</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui-layer">
+            <div id="sun-counter">阳光: <span id="sun-amount">50</span></div>
+            <div id="plant-bar">
+                <div class="plant-card" data-plant="peashooter" onclick="selectPlant('peashooter')">
+                    <div class="card-img peashooter-icon"></div>
+                    <div class="card-cost">100</div>
+                </div>
+                <div class="plant-card" data-plant="sunflower" onclick="selectPlant('sunflower')">
+                    <div class="card-img sunflower-icon"></div>
+                    <div class="card-cost">50</div>
+                </div>
+                <div class="plant-card" data-plant="wallnut" onclick="selectPlant('wallnut')">
+                    <div class="card-img wallnut-icon"></div>
+                    <div class="card-cost">50</div>
+                </div>
+            </div>
+            <div id="game-over-screen" class="hidden">
+                <h1>僵尸吃掉了你的脑子!</h1>
+                <button onclick="restartGame()">重新开始</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/constants.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
